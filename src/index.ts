@@ -1,12 +1,12 @@
 const domain = 'https://dummyimage.com/';
-interface imgPlaceholderSettings {
+interface ImgPlaceholderSettings {
   width?: number;
   height?: number;
   bgColor?: string;
   txtColor?: string;
   imgText?: string;
 }
-export const imgPlaceholder = ({ width, height, bgColor, txtColor, imgText }: imgPlaceholderSettings) => {
+export const ImgPlaceholder = ({ width, height, bgColor, txtColor, imgText }: ImgPlaceholderSettings) => {
   let imgUrl = `${domain}`;
   if (!width && !height) {
     imgUrl += '300x300';
