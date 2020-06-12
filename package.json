@@ -1,6 +1,6 @@
 {
   "name": "dummy-placeholder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dummy image & text placeholders",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
