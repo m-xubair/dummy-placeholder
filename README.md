@@ -11,7 +11,7 @@ npm i dummy-placeholdeer --save
 ### Usage
 
 ```bash
-import { ImgPlaceholder } from "dummy-placeholder";
+import { ImgPlaceholder, TxtPlaceholder } from "dummy-placeholder";
 
 ImgPlaceholder({}); // Will return a placeholder image url of 300x300
 TxtPlaceholder({}); // Will return a string of 200 words by default
@@ -64,7 +64,7 @@ If you are using any frontend framework like (React, Vuejs, Angular) you have to
 <div [innerHTML]="TxtPlaceholder({ paragraphs: 2, paraWords: 250, type: 'html' })"></div>
 ```
 
-### Configuration
+### Configuration (Dummy Text)
 
 ####
 
@@ -74,5 +74,5 @@ const configObj = {
     paraWords: 250,
     type: 'html' // html | plain (By default plain text)
 }
-ImgPlaceholder(configObj); // will return 3 paragraphs enclosed within <p> tag. Each paragraph with 250 words.
+TxtPlaceholder(configObj); // will return 3 paragraphs enclosed within <p> tag. Each paragraph with 250 words.
 ```
