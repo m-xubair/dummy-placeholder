@@ -9,14 +9,14 @@ export const TxtPlaceholder = ({ paragraphs, paraWords, type = 'plain' }: TxtPla
   paraWords = paraWords ? paraWords : constants.paragraphWords;
   const txtToParagraphs = constants.text.split('\n');
   const allParagraphs = txtToParagraphs.filter((p) => p);
-  let randomParagraphs = allParagraphs.sort(() => Math.random() - Math.random()).slice(0, paragraphs);
+  const randomParagraphs = allParagraphs.sort(() => Math.random() - Math.random()).slice(0, paragraphs);
   while (randomParagraphs.length < paragraphs) {
     const moreParagraphs = allParagraphs
       .sort(() => Math.random() - Math.random())
       .slice(0, paragraphs - randomParagraphs.length);
     randomParagraphs.push(...moreParagraphs);
   }
-  let dummyText = randomParagraphs.map((p) => {
+  const dummyText = randomParagraphs.map((p) => {
     return shortenString(p, paraWords);
   });
   const text = type === 'plain' ? dummyText.join('\n') : `<p>${dummyText.join(`</p><p>`)}</p>`;
